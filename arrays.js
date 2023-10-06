@@ -88,3 +88,29 @@ function quickCheck(arr, elem) {
   
   console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 //------------------------------------
+function filteredArray(arr, elem) {
+    let newArr = [];
+    // Only change code below this line
+    console.log[arr]
+    for (let i = 0; i < arr.length; i++){
+      if (arr[i].indexOf(elem) == -1){
+        newArr.push(arr[i]); 
+        } 
+    }
+    // Only change code above this line
+    return newArr;
+  }
+  
+  
+  console.log(filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2));
+//------------------------------------
+let myNestedArray = [
+    // Only change code below this line
+    ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+    ['loop', 'shift', 6, 7, 1000, 'method'],
+    [['deep']],
+    [[['deeper']]],
+    [[[['deepest']]]]
+    // Only change code above this line
+  ];
+//------------------------------------
