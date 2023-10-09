@@ -74,7 +74,7 @@ palavra-chave in. Se tivermos um objeto users com uma propriedade Alan, poderemo
 users.hasOwnProperty('Alan');
 'Alan' in users;*/
 //-------------------------------------------
-let users = {
+let users2 = {
     Alan: {
       age: 27,
       online: true
@@ -107,7 +107,7 @@ let users = {
     // Only change code above this line
   }
   
-  console.log(isEveryoneHere(users));
+  console.log(isEveryoneHere(users2));
 //-------------------------------------------
 /*Às vezes você precisa iterar todas as chaves dentro de um objeto. 
 Você pode usar um loop for...in para fazer isso. O loop for...in se parece com:
@@ -121,4 +121,94 @@ for (const food in refrigerator) {
   console.log(food, refrigerator[food]);
 }
 */
+//-------------------------------------------
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(allUsers) {
+    // Only change code below this line
+    let count = 0;
+    for (let userss in allUsers){
+      if (allUsers[userss]["online"] === true){
+        count +=1;
+      }
+      else{
+        count +=0;
+      }}
+      return count;
+    // Only change code above this line
+  }
+  
+  console.log(countOnline(users));
+//-------------------------------------------
+/*Também podemos gerar um array que contém todas as chaves armazenadas em um objeto com o método ''Object.keys()''. 
+Este método recebe um objeto como argumento e retorna uma matriz de strings 
+representando cada propriedade do objeto. Novamente, não haverá uma ordem específica para as entradas na matriz.*/
+//-------------------------------------------
+let users3 = {
+    Alan: {
+      age: 27,
+      online: false
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: false
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+  
+  function getArrayOfUsers(obj) {
+    // Only change code below this line´
+    let array = []
+    array = Object.keys(obj);
+    return array;
+    // Only change code above this line
+  }
+  
+  console.log(getArrayOfUsers(users3));
+//-------------------------------------------
+let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+      username: 'kennethCodesAllDay',
+      joinDate: 'March 26, 2016',
+      organization: 'freeCodeCamp',
+      friends: [
+        'Sam',
+        'Kira',
+        'Tomo'
+      ],
+      location: {
+        city: 'San Francisco',
+        state: 'CA',
+        country: 'USA'
+      }
+    }
+  };
+  
+  function addFriend(userObj, friend) {
+    // Only change code below this line
+    userObj.data.friends.push(friend);
+    return userObj.data.friends;
+    // Only change code above this line
+  }
+  
+  console.log(addFriend(user, 'Pete'));
 //-------------------------------------------
